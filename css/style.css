@@ -117,13 +117,14 @@ header .right-menu li a.dropdown + ul {
 	width: 600px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 section.steps {
 	color: #D80358;
 	text-align: center;
 	padding: 30px 0;
-	height: calc(100vh - 240px);
+	height: calc(100vh - 270px);
 }
 
 section.steps .small-container > h1 {
@@ -350,7 +351,7 @@ footer ul li a {
 
 footer > h1 {
 	margin: 0;
-	padding: 30px 0 40px;
+	padding: 30px 10px 40px;
 	font-size: 16px;
 }
 
@@ -380,6 +381,8 @@ footer ul.social li a {
 @media screen and (min-width: 600px) {
 	section.options.sticky {
 		padding: 10px 0;
+		height: 170px;
+		z-index: 999;
 	}
 
 	section.options.sticky:before {
@@ -390,8 +393,10 @@ footer ul.social li a {
 
 	section.options.sticky h1 {
 		margin-bottom: 10px;
-		display: inline-block;
-		vertical-align: top;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 0;
 	}
 
 	section.options.sticky ul {
@@ -407,11 +412,12 @@ footer ul.social li a {
 	}
 
 	section.options.sticky ul li span .img-box img {
-		width: 50px;
+		width: 40px;
 	}
 
 	section.options.sticky ul li span .title {
-		display: none;
+		height: 30px;
+		font-size: 14px;
 	}
 }
 
@@ -462,13 +468,31 @@ footer ul.social li a {
 		width: 55px;
 	}
 	section.steps {
-		height: calc(100vh - 260px);
+		height: calc(100vh - 290px);
 	}
 }
 
 @media screen and (max-width: 600px) {
 	body {
 		padding-bottom: 60px;
+	}
+	header .left-menu {
+		white-space: nowrap;
+		overflow-x: auto;
+	}
+	header .left-menu li {
+		font-size: 12px;
+	}
+	header .right-menu li a {
+		padding: 0 5px;
+		font-size: 12px;
+		width: 65px;
+	}
+	header .right-menu li a.dropdown {
+		width: 50px;
+	}
+	header .right-menu li + li a {
+		border: none;
 	}
 	section.steps {
 		height: auto;
@@ -504,7 +528,7 @@ footer ul.social li a {
 		font-size: 22px;
 		margin: 0 0 20px;
 		text-align: left;
-		padding: 0 50px;
+		padding: 0 20px;
 		cursor: pointer;
 	}
 	section.options h1 img {
@@ -518,7 +542,7 @@ footer ul.social li a {
 		transform: rotate(.5turn);
 	}
 	section.options.open {
-		height: calc(100vh - 120px);
+		height: 100vh;
 	}
 	section.options.open:before {
 		animation: fill_menu linear .3s;
@@ -535,6 +559,96 @@ footer ul.social li a {
 		padding: 20px 50px;
 		font-size: 18px;
 		width: calc(80% - 30px);
+	}
+	section.options ul li > input[type="checkbox"] + span {
+		background-color: rgba(0,0,0,.1);
+	}
+}
+
+@media screen and (max-width: 600px) and (orientation: landscape) {
+	header .right-menu li a {
+		width: auto;
+	}
+	section.steps {
+		min-height: calc(100vh - 180px);
+		padding: 15px 0;
+	}
+	.small-container {
+		width: 100%;
+	}
+	section.steps .small-container > h1 {
+		font-size: 20px;
+		margin: 0 0 5px;
+	}
+	section.steps .small-container > ul li {
+		width: 33.33333%;
+	}
+	section.steps .small-container > ul li .pink-circle {
+		width: 80px;
+		height: 80px;
+		padding: 20px;
+		margin: 0 auto 10px;
+	}
+	section.steps .small-container > ul li strong {
+		margin-bottom: 5px;
+	}
+	section.steps .small-container > ul li + li:before {
+		display: none;
+	}
+	section.options {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 10px 0;
+		height: 50px;
+		z-index: 999;
+		transition: height .3s;
+	}
+	section.options:before {
+		width: 100%;
+		padding-bottom: 100%;
+		left: 0;
+		border-radius: 0;
+		min-height: calc(100vh - 120px);
+	}
+	section.options h1 {
+		font-size: 22px;
+		margin: 0 0 15px;
+		text-align: left;
+		padding: 0 20px;
+		cursor: pointer;
+	}
+	section.options h1 img {
+		display: inline-block;
+		width: 20px;
+		float: right;
+		margin: 8px 0;
+		transition: all .3s;
+	}
+	section.options.open h1 img {
+		transform: rotate(.5turn);
+	}
+	section.options.open {
+		height: 100vh;
+	}
+	section.options.open:before {
+		animation: fill_menu linear .3s;
+	}
+	section.options ul {
+		width: 100%;
+		margin-bottom: 0;
+		max-width: 100%;
+		padding: 0 20px;
+	}
+	section.options ul li {
+		width: calc(25% - 30px);
+		margin-bottom: 15px;
+	}
+	section.options input[type="submit"] {
+		padding: 20px 50px;
+		font-size: 18px;
+		width: calc(50% - 50px);
 	}
 	section.options ul li > input[type="checkbox"] + span {
 		background-color: rgba(0,0,0,.1);
