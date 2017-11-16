@@ -53,11 +53,6 @@
 					Registro
 				</a>
 			</li>
-			<li>
-				<a href="#" class="search">
-					<img src="img/icon-search.svg" alt="">
-				</a>
-			</li>
 		</ul>
 	</header>
 	<section class="steps">
@@ -103,8 +98,9 @@
 		</div>
 	</section>
 	<section class="options">
-		<h1>
+		<h1 id="toggle_options">
 			¿Qué estás buscando?
+			<img src="img/icon-arrow-up-white.png" alt="">
 		</h1>
 		<form action="">
 			<ul>
@@ -163,7 +159,7 @@
 					</span>
 				</li>
 			</ul>
-			<input type="submit" value="encuéntralo">
+			<input type="submit" value="encuéntralo" id="find_it">
 		</form>
 	</section>
 	<footer>
@@ -209,5 +205,7 @@
 			2017 Ⓒ Phonr App Spain S.L. - Todos los derechos reservados
 		</small>
 	</footer>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
