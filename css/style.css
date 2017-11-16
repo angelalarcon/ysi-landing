@@ -1,0 +1,368 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 100px 0 0;
+	font-size: 14px;
+	font-family: Arial;
+}
+
+img {
+	max-width: 100%;
+}
+
+header {
+	background-color: #000;
+	padding: 15px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 999;
+}
+
+header .logo {
+	margin: 5px 0;
+	height: 60px;
+}
+
+header .left-menu {
+	display: inline-block;
+	height: 100%;
+	margin: 0 50px;
+	list-style: none;
+	padding: 0;
+	font-size: 0;
+	text-transform: uppercase;
+	vertical-align: top;
+}
+
+header .left-menu li {
+	display: inline-block;
+	height: 100%;
+	font-size: 14px;
+}
+
+header .left-menu li a {
+	display: block;
+	height: 100%;
+	line-height: 70px;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 10px;
+}
+
+header .right-menu {
+	display: inline-block;
+	height: 100%;
+	list-style: none;
+	padding: 0;
+	font-size: 0;
+	text-transform: uppercase;
+	vertical-align: top;
+	float: right;
+}
+
+header .right-menu li {
+	display: inline-block;
+	height: 100%;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+header .right-menu li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 10px;
+	margin: 24px 0;
+}
+
+header .right-menu li a.dropdown {
+	position: relative;
+	margin: 24px 15px;
+	width: 60px;
+}
+
+header .right-menu li a.dropdown:after {
+	content: '';
+	border-top: 5px solid #fff;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+}
+
+header .right-menu li + li a {
+	border-left: 1px solid #fff;
+}
+
+header .right-menu li a.dropdown + ul {
+	display: none;
+}
+
+header .right-menu li a.search {
+	padding: 15px 10px;
+	width: 50px;
+	border: none;
+	margin: 0;
+}
+
+.small-container {
+	width: 600px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+section.steps {
+	color: #D80358;
+	text-align: center;
+	padding: 30px 0;
+}
+
+section.steps .small-container > h1 {
+	font-weight: normal;
+	font-size: 30px;
+	margin: 0 0 20px;
+}
+
+section.steps .small-container > ul {
+	display: inline-block;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+section.steps .small-container > ul li {
+	display: inline-block;
+	font-size: 16px;
+	width: 33.33333%;
+	vertical-align: top;
+	position: relative;
+}
+
+section.steps .small-container > ul li + li:before {
+	content: '....';
+	position: absolute;
+	top: 10px;
+	right: calc(50% + 60px);
+	color: #DBDBDB;
+	font-size: 60px;
+	padding: 0 10px;
+	font-family: serif;
+}
+
+section.steps .small-container > ul li .pink-circle {
+	display: block;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background-color: #D80358;
+	background: -webkit-linear-gradient(left, #D70256 , #DF0867);
+	background: -o-linear-gradient(right, #D70256, #DF0867);
+	background: -moz-linear-gradient(right, #D70256, #DF0867);
+	background: linear-gradient(to right, #D70256 , #DF0867);
+	padding: 30px;
+	margin: 0 auto 25px;
+}
+
+section.steps .small-container > ul li strong {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	display: block;
+}
+
+section.steps .small-container > ul li p {
+	color: #B9B9B9;
+	font-weight: bold;
+	margin: 0;
+}
+
+section.options {
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	padding: 70px 0 30px;
+}
+
+section.options:before {
+	content: '';
+	width: calc(100% - 40px);
+	padding-bottom: calc(100% - 40px);
+	position: absolute;
+	top: 0;
+	left: 20px;
+	background-color: #A00C58;
+	border-radius: 50%;
+	z-index: -1;
+}
+
+section.options h1 {
+	font-size: 22px;
+	margin: 0 0 20px;
+}
+
+section.options ul {
+	display: block;
+	width: 600px;
+	max-width: 80%;
+	padding: 0;
+	margin: 0 auto 20px;
+	font-size: 0;
+	list-style: none;
+}
+
+section.options ul li {
+	display: inline-block;
+	font-size: 16px;
+	font-weight: bold;
+	width: calc(25% - 30px);
+	margin: 0 15px;
+	position: relative;
+	vertical-align: top;
+}
+
+section.options ul li > input[type="checkbox"] {
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 100;
+	cursor: pointer;
+}
+
+section.options ul li > input[type="checkbox"] + span {
+	display: block;
+	border-radius: 10px;
+	padding: 10px;
+	transition: all .3s;
+	border: 2px solid transparent;
+}
+
+section.options ul li > input[type="checkbox"]:hover + span {
+	background-color: rgba(0,0,0,.1);
+}
+
+section.options ul li > input[type="checkbox"]:checked + span {
+	border: 2px solid #fff;
+}
+
+section.options ul li span .img-box {
+	height: 100px;
+	display: block;
+	position: relative;
+}
+
+section.options ul li span .img-box img {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section.options ul li span .title {
+	height: 50px;
+	display: block;
+	position: relative;
+}
+
+section.options ul li span .title span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+section.options input[type="submit"] {
+	background-color: #D30050;
+	background: -webkit-linear-gradient(left, #D30050 , #E30A6F);
+	background: -o-linear-gradient(right, #D30050, #E30A6F);
+	background: -moz-linear-gradient(right, #D30050, #E30A6F);
+	background: linear-gradient(to right, #D30050 , #E30A6F);
+	font-weight: bold;
+	text-transform: uppercase;
+	border: none;
+	padding: 15px 50px;
+	font-size: 16px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+}
+
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 30px 0 20px;
+}
+
+footer ul {
+	list-style: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+footer ul li {
+	display: inline-block;
+	padding: 0 25px;
+	position: relative;
+}
+
+footer ul li + li:before {
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: #D30050;
+	position: absolute;
+	top: calc(50% - 3px);
+	left: -3px;
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+footer > h1 {
+	margin: 0;
+	padding: 30px 0 40px;
+	font-size: 16px;
+}
+
+footer > h1 .logo {
+	height: 40px;
+}
+
+footer > h1 .logo + span {
+	vertical-align: top;
+	display: inline-block;
+	margin: 16px 0 0;
+}
+
+footer ul.social li + li:before {
+	display: none;
+}
+
+footer ul.social li {
+	padding: 0 5px;
+}
+
+footer ul.social li a {
+	width: 30px;
+	display: block;
+}
