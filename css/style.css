@@ -566,6 +566,9 @@ footer ul.social li a {
 }
 
 @media screen and (max-width: 600px) and (orientation: landscape) {
+	body {
+		padding-bottom: 50px;
+	}
 	header .right-menu li a {
 		width: auto;
 	}
