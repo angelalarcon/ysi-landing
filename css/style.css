@@ -307,7 +307,7 @@ section.options input[type="submit"] {
 	cursor: pointer;
 }
 
-section.options ul li > input[type="checkbox"] + span {
+section.options.sticky ul li > input[type="checkbox"] + span {
 	background-color: rgba(0,0,0,.1);
 }
 
