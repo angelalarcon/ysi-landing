@@ -156,7 +156,7 @@ section.steps .small-container > ul li + li:before {
 	right: calc(50% + 60px);
 	color: #DBDBDB;
 	font-size: 60px;
-	padding: 0 10px;
+	padding: 0 7px;
 	font-family: serif;
 }
 
@@ -539,9 +539,12 @@ footer ul.social li a {
 	}
 	section.options.open {
 		height: 100vh;
+		overflow-y: auto;
 	}
 	section.options.open:before {
 		animation: fill_menu linear .3s;
+		min-height: 100%;
+		padding-bottom: 0;
 	}
 	section.options ul {
 		width: 100%;
