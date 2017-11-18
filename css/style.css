@@ -472,6 +472,7 @@ footer ul.social li a {
 @media screen and (max-width: 1024px) and (orientation: portrait) {
 	section.steps {
 		height: auto;
+		min-height: calc(100vh - 706px);
 	}
 	section.steps .small-container > ul li {
 		width: 50%;
