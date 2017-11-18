@@ -125,6 +125,7 @@ section.steps {
 	text-align: center;
 	padding: 30px 0;
 	height: calc(100vh - 270px);
+	overflow-y: auto;
 }
 
 section.steps .small-container > h1 {
@@ -511,7 +512,8 @@ footer ul.social li a {
 		padding: 15px 0;
 		height: 60px;
 		z-index: 999;
-		transition: height .3s;
+		background-color: transparent;
+		transition: height .3s, .3s background-color .3s;
 	}
 	section.options:before {
 		width: 100%;
@@ -540,6 +542,7 @@ footer ul.social li a {
 	section.options.open {
 		height: 100vh;
 		overflow-y: auto;
+		background-color: #A00C58;
 	}
 	section.options.open:before {
 		animation: fill_menu linear .3s;
