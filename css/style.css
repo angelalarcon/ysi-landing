@@ -379,7 +379,7 @@ footer ul.social li a {
 	display: block;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 601px) {
 	section.options.sticky {
 		padding: 10px 0;
 		height: 170px;
