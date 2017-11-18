@@ -123,7 +123,7 @@ header .right-menu li a.dropdown + ul {
 section.steps {
 	color: #D80358;
 	text-align: center;
-	padding: 30px 0;
+	padding: 20px 0;
 	height: calc(100vh - 270px);
 	overflow-y: auto;
 }
@@ -131,7 +131,7 @@ section.steps {
 section.steps .small-container > h1 {
 	font-weight: normal;
 	font-size: 30px;
-	margin: 0 0 20px;
+	margin: 0 0 10px;
 }
 
 section.steps .small-container > ul {
@@ -172,12 +172,12 @@ section.steps .small-container > ul li .pink-circle {
 	background: -moz-linear-gradient(right, #D70256, #DF0867);
 	background: linear-gradient(to right, #D70256 , #DF0867);
 	padding: 30px;
-	margin: 0 auto 25px;
+	margin: 0 auto 15px;
 }
 
 section.steps .small-container > ul li strong {
 	text-transform: uppercase;
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 	display: block;
 }
 
@@ -466,6 +466,22 @@ footer ul.social li a {
 	}
 	section.steps {
 		height: calc(100vh - 290px);
+	}
+}
+
+@media screen and (max-width: 800px) and (orientation: portrait) {
+	section.steps {
+		height: auto;
+	}
+	section.steps .small-container > ul li {
+		width: 50%;
+		margin-bottom: 20px;
+	}
+	section.steps .small-container > ul li p {
+		padding: 0 20px;
+	}
+	section.steps .small-container > ul li + li:before {
+		display: none;
 	}
 }
 
